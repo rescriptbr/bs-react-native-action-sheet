@@ -1,6 +1,6 @@
 {
   "name": "bs-react-native-action-sheet",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "description": "BS bindings for https://github.com/expo/react-native-action-sheet/",
   "main": "lib/js/re/root.js",
   "repository": "git@github.com:Astrocoders/bs-package-boilerplate.git",
