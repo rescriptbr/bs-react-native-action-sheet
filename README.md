@@ -7,9 +7,11 @@ A BuckleScript NPM package boilerplate
 
 ## Install
 ```
-yarn add bs-react-native-action-sheet
+yarn add bs-react-native-action-sheet @expo/react-native-action-sheet
 ```
 And then update your bsconfig.json with it
+Also do the normal setup as you would do for the JS one.
+Add the ActionSheetProvider somewhere in the top of your components tree.
 
 ## Usage
 ```reason
