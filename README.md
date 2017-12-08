@@ -1,9 +1,9 @@
-# bs-package-boilerplate
+# bs-react-native-action-sheet
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Astrocoders/bs-package-boilerplate.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/Astrocoders/bs-package-boilerplate.svg?branch=master)](https://travis-ci.org/Astrocoders/bs-package-boilerplate)
+[![Greenkeeper badge](https://badges.greenkeeper.io/reasonbrazil/bs-react-native-action-sheet.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/reasonbrazil/bs-react-native-action-sheet.svg?branch=master)](https://travis-ci.org/Astrocoders/bs-react-native-action-sheet)
 
-A BuckleScript NPM package boilerplate
+BS bindings for @expo/react-native-action-sheet
 
 ## Install
 ```
