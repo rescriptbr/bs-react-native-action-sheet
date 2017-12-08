@@ -1,0 +1,22 @@
+{
+  "name": "bs-react-native-action-sheet",
+  "version": "1.0.0",
+  "description": "BS bindings for https://github.com/expo/react-native-action-sheet/",
+  "main": "lib/js/re/root.js",
+  "repository": "git@github.com:Astrocoders/bs-package-boilerplate.git",
+  "author": "Gabriel R. Abreu <grsabreu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "reason-react": "^0.3.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^2.0.0"
+  },
+  "scripts": {
+    "start": "yarn bs:watch",
+    "test": "yarn bs:build",
+    "bs:build": "bsb -make-world -clean-world",
+    "bs:watch": "bsb -make-world -clean-world -w",
+    "bs:setup": "bsb -make-world"
+  }
+}

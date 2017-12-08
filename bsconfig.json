@@ -1,0 +1,14 @@
+{
+  "name": "bs-react-native-action-sheet",
+  "reason": {
+    "react-jsx": 2
+  },
+  "bs-dependencies": ["reason-react"],
+  "bsc-flags": ["-bs-super-errors"],
+  "refmt": 3,
+  "sources": [
+    {
+      "dir": "re"
+    }
+  ]
+}
