@@ -2,14 +2,14 @@
 external connectActionSheet : ReasonReact.reactClass => ReasonReact.reactClass =
   "connectActionSheet";
 
-let component = ReasonReact.statelessComponent("ActionSheetProvider");
-
 type showActionSheetWithOptions =
 [@bs] (
     {. "options": array(string), "cancelButtonIndex": int, "destructiveButtonIndex": int},
     int => unit
   ) =>
   unit;
+
+let component = ReasonReact.statelessComponent("ActionSheetProvider");
 
 let handleShowActionSheetWithOptions =
     (
@@ -28,21 +28,23 @@ let handleShowActionSheetWithOptions =
     callback
   );
 
-let make' = (~showActionSheetWithOptions: showActionSheetWithOptions, children) => {
+let make' = (~showActionSheetWithOptions, children) => {
   ...component,
   render: (_self) =>
-    children[0](
+    children(
       ~showActionSheetWithOptions=handleShowActionSheetWithOptions(showActionSheetWithOptions)
     )
 };
 
+let jsComponent =
+  ReasonReact.wrapReasonForJs(
+    ~component,
+    (props) =>
+      make'(~showActionSheetWithOptions=props##showActionSheetWithOptions, props##children)
+  );
+
+let enhanced = connectActionSheet(jsComponent);
+
 let make = (children) => {
-  let jsComponent =
-    ReasonReact.wrapReasonForJs(
-      ~component,
-      (props: {. "showActionSheetWithOptions": showActionSheetWithOptions}) =>
-        make'(~showActionSheetWithOptions=props##showActionSheetWithOptions, children)
-    );
-  let enhanced = connectActionSheet(jsComponent);
-  ReasonReact.wrapJsForReason(~reactClass=enhanced, ~props=Js.Obj.empty(), [||])
+  ReasonReact.wrapJsForReason(~reactClass=enhanced, ~props=Js.Obj.empty(), children)
 };
